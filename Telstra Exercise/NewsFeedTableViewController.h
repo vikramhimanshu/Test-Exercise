@@ -1,5 +1,5 @@
 //
-//  MasterViewController.h
+//  NewsFeedTableViewController.h
 //  Telstra Exercise
 //
 //  Created by Himanshu on 2/6/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MasterViewController : UITableViewController
-
+@interface NewsFeedTableViewController : UITableViewController
 
 @end
-

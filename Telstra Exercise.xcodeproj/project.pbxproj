@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A315B2131A850D24008F57BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2121A850D24008F57BD /* main.m */; };
-		A315B2161A850D24008F57BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2151A850D24008F57BD /* AppDelegate.m */; };
-		A315B2191A850D24008F57BD /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2181A850D24008F57BD /* MasterViewController.m */; };
-		A315B21C1A850D24008F57BD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B21B1A850D24008F57BD /* DetailViewController.m */; };
-		A315B21F1A850D24008F57BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A315B21D1A850D24008F57BD /* Main.storyboard */; };
+		A315B2131A850D24008F57BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2121A850D24008F57BD /* main.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A315B2161A850D24008F57BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2151A850D24008F57BD /* AppDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		A315B2211A850D24008F57BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A315B2201A850D24008F57BD /* Images.xcassets */; };
-		A315B2241A850D24008F57BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A315B2221A850D24008F57BD /* LaunchScreen.xib */; };
 		A315B2301A850D24008F57BD /* Telstra_ExerciseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B22F1A850D24008F57BD /* Telstra_ExerciseTests.m */; };
+		A315B23B1A852737008F57BD /* NewsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B23A1A852737008F57BD /* NewsFeedTableViewCell.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A315B23C1A852737008F57BD /* NewsFeedTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B23A1A852737008F57BD /* NewsFeedTableViewCell.m */; };
+		A315B23F1A853468008F57BD /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B23E1A853468008F57BD /* NewsFeedTableViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A315B2401A853468008F57BD /* NewsFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B23E1A853468008F57BD /* NewsFeedTableViewController.m */; };
+		A315B2431A8538EA008F57BD /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2421A8538EA008F57BD /* NetworkRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A315B2441A8538EA008F57BD /* NetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = A315B2421A8538EA008F57BD /* NetworkRequest.m */; };
+		A3F241DB1A858FA4006492AC /* NewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F241DA1A858FA4006492AC /* NewsFeed.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A3F241DC1A858FA4006492AC /* NewsFeed.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F241DA1A858FA4006492AC /* NewsFeed.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,16 +37,18 @@
 		A315B2121A850D24008F57BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A315B2141A850D24008F57BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A315B2151A850D24008F57BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A315B2171A850D24008F57BD /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
-		A315B2181A850D24008F57BD /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		A315B21A1A850D24008F57BD /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		A315B21B1A850D24008F57BD /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
-		A315B21E1A850D24008F57BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A315B2201A850D24008F57BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A315B2231A850D24008F57BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A315B2291A850D24008F57BD /* Telstra ExerciseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Telstra ExerciseTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A315B22E1A850D24008F57BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A315B22F1A850D24008F57BD /* Telstra_ExerciseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Telstra_ExerciseTests.m; sourceTree = "<group>"; };
+		A315B2391A852737008F57BD /* NewsFeedTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedTableViewCell.h; sourceTree = "<group>"; };
+		A315B23A1A852737008F57BD /* NewsFeedTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTableViewCell.m; sourceTree = "<group>"; };
+		A315B23D1A853468008F57BD /* NewsFeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedTableViewController.h; sourceTree = "<group>"; };
+		A315B23E1A853468008F57BD /* NewsFeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedTableViewController.m; sourceTree = "<group>"; };
+		A315B2411A8538EA008F57BD /* NetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkRequest.h; sourceTree = "<group>"; };
+		A315B2421A8538EA008F57BD /* NetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkRequest.m; sourceTree = "<group>"; };
+		A3F241D91A858FA4006492AC /* NewsFeed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeed.h; sourceTree = "<group>"; };
+		A3F241DA1A858FA4006492AC /* NewsFeed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeed.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,14 +92,16 @@
 			children = (
 				A315B2141A850D24008F57BD /* AppDelegate.h */,
 				A315B2151A850D24008F57BD /* AppDelegate.m */,
-				A315B2171A850D24008F57BD /* MasterViewController.h */,
-				A315B2181A850D24008F57BD /* MasterViewController.m */,
-				A315B21A1A850D24008F57BD /* DetailViewController.h */,
-				A315B21B1A850D24008F57BD /* DetailViewController.m */,
-				A315B21D1A850D24008F57BD /* Main.storyboard */,
+				A315B2391A852737008F57BD /* NewsFeedTableViewCell.h */,
+				A315B23A1A852737008F57BD /* NewsFeedTableViewCell.m */,
+				A315B23D1A853468008F57BD /* NewsFeedTableViewController.h */,
+				A315B23E1A853468008F57BD /* NewsFeedTableViewController.m */,
 				A315B2201A850D24008F57BD /* Images.xcassets */,
-				A315B2221A850D24008F57BD /* LaunchScreen.xib */,
 				A315B2101A850D24008F57BD /* Supporting Files */,
+				A315B2411A8538EA008F57BD /* NetworkRequest.h */,
+				A315B2421A8538EA008F57BD /* NetworkRequest.m */,
+				A3F241D91A858FA4006492AC /* NewsFeed.h */,
+				A3F241DA1A858FA4006492AC /* NewsFeed.m */,
 			);
 			path = "Telstra Exercise";
 			sourceTree = "<group>";
@@ -204,8 +212,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A315B21F1A850D24008F57BD /* Main.storyboard in Resources */,
-				A315B2241A850D24008F57BD /* LaunchScreen.xib in Resources */,
 				A315B2211A850D24008F57BD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,10 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F241DB1A858FA4006492AC /* NewsFeed.m in Sources */,
 				A315B2161A850D24008F57BD /* AppDelegate.m in Sources */,
-				A315B2191A850D24008F57BD /* MasterViewController.m in Sources */,
+				A315B2431A8538EA008F57BD /* NetworkRequest.m in Sources */,
+				A315B23B1A852737008F57BD /* NewsFeedTableViewCell.m in Sources */,
 				A315B2131A850D24008F57BD /* main.m in Sources */,
-				A315B21C1A850D24008F57BD /* DetailViewController.m in Sources */,
+				A315B23F1A853468008F57BD /* NewsFeedTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +243,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A315B23C1A852737008F57BD /* NewsFeedTableViewCell.m in Sources */,
+				A315B2401A853468008F57BD /* NewsFeedTableViewController.m in Sources */,
+				A315B2441A8538EA008F57BD /* NetworkRequest.m in Sources */,
+				A3F241DC1A858FA4006492AC /* NewsFeed.m in Sources */,
 				A315B2301A850D24008F57BD /* Telstra_ExerciseTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,25 +261,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		A315B21D1A850D24008F57BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A315B21E1A850D24008F57BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A315B2221A850D24008F57BD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A315B2231A850D24008F57BD /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		A315B2311A850D24008F57BD /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -276,7 +269,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -303,7 +296,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -317,7 +310,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -338,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -349,7 +342,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Telstra Exercise/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -359,7 +354,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				INFOPLIST_FILE = "Telstra Exercise/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -418,6 +415,7 @@
 				A315B2351A850D24008F57BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A315B2361A850D24008F57BD /* Build configuration list for PBXNativeTarget "Telstra ExerciseTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +424,7 @@
 				A315B2381A850D24008F57BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

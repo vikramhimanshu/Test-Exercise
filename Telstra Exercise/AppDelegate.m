@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
+#import "NewsFeedTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,10 +15,21 @@
 
 @implementation AppDelegate
 
++(AppDelegate *)sharedInstance {
+    return [[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [self setWindowNavigationController];
+    
     return YES;
+}
+
+- (void)setWindowNavigationController {
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.newsFeedTableViewController];
+    [self.window setRootViewController:navigationController];
+    [navigationController release];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -43,4 +54,26 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+-(UITableViewController *)newsFeedTableViewController {
+    if (_newsFeedTableViewController == nil) {
+       _newsFeedTableViewController = [[NewsFeedTableViewController alloc] initWithStyle:UITableViewStylePlain];
+    }
+    return _newsFeedTableViewController;
+}
+
+-(UIWindow *)window {
+    if (_window == nil) {
+        CGRect windowFrame = [UIScreen mainScreen].bounds;
+        self.window = [[[UIWindow alloc] initWithFrame:windowFrame] autorelease];
+        [self.window makeKeyAndVisible];
+    }
+    return _window;
+}
+
+-(void)dealloc
+{
+    [_newsFeedTableViewController release];
+    [super dealloc];
+}
 @end

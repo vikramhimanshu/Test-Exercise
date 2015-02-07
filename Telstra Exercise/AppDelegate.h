@@ -8,10 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@class NewsFeedTableViewController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) UIWindow *window;
 
+@property (retain, nonatomic) NewsFeedTableViewController *newsFeedTableViewController;
+
+
++(AppDelegate *)sharedInstance;
 
 @end
 
