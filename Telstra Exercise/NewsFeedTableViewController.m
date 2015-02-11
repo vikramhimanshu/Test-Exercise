@@ -111,6 +111,7 @@
     NewsFeedTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([NewsFeedTableViewCell class])
                                                             forIndexPath:indexPath];
     if ([self.newsFeedArray count]) {
+        cell.backgroundColor = [UIColor clearColor];
         [cell setupWithNewsFeedData:[self.newsFeedArray objectAtIndex:indexPath.row]];
     }
     return cell;

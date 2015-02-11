@@ -52,9 +52,8 @@
         self.titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.titleLabel.textColor = [UIColor blueColor];
         self.titleLabel.font = [UIFont systemFontOfSize:14];
+        self.titleLabel.backgroundColor = [UIColor clearColor];
 
-//        self.titleLabel.layer.borderColor = [UIColor greenColor].CGColor;
-//        self.titleLabel.layer.borderWidth = 1.0;
         [self.contentView addSubview:self.titleLabel];
         
         //Description View's Frame
@@ -67,10 +66,7 @@
         self.descriptionLabel.numberOfLines = 0;
         self.descriptionLabel.lineBreakMode = NSLineBreakByWordWrapping;
         self.descriptionLabel.font = [UIFont systemFontOfSize:12];
-        //
-//        self.descriptionLabel.layer.borderColor = [UIColor redColor].CGColor;
-//        self.descriptionLabel.layer.borderWidth = 1.0;
-        
+        self.descriptionLabel.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.descriptionLabel];
 
         CGRect imgViewFrame = CGRectZero;
@@ -81,14 +77,10 @@
 
         self.imgView = [[UIImageView alloc] initWithFrame:imgViewFrame];
         self.imgView.contentMode = UIViewContentModeScaleAspectFit;
-        //
-//        self.imgView.layer.borderColor = [UIColor blueColor].CGColor;
-//        self.imgView.layer.borderWidth = 1.0;
-        
+        self.imgView.backgroundColor = [UIColor clearColor];
         [self.contentView addSubview:self.imgView];
-        //
-//        self.layer.borderColor = [UIColor blackColor].CGColor;
-//        self.layer.borderWidth = 1.0;
+        
+        self.contentView.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
@@ -188,6 +180,12 @@
     
     imgViewFrame.origin.y = contentHeight - imgViewFrame.size.height - PADDING;
     self.imgView.frame = imgViewFrame;
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.contentView.bounds;
+    gradient.colors = @[(id)[[UIColor whiteColor] CGColor],
+                        (id)[[UIColor colorWithWhite:0.8 alpha:1.0] CGColor]];
+    [self.layer insertSublayer:gradient atIndex:0];
 }
 
 @end
