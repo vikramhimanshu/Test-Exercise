@@ -20,6 +20,16 @@
 
 - (instancetype)initWithTitle:(NSString *)title description:(NSString *)desc imagePath:(NSString *)imagePath
 {
+    if ([title isEqualToString:@"<null>"]) {
+        title = nil;
+    }
+    if ([desc isEqualToString:@"<null>"]) {
+        desc = nil;
+    }
+    if ([imagePath isEqualToString:@"<null>"]) {
+        imagePath = nil;
+    }
+    
     if (![title length] && ![desc length] && ![imagePath length]) {
         return nil;
     }

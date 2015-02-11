@@ -111,25 +111,6 @@
      }];
 }
 
-- (NSString *)trimWhiteSpaceAndNewLineFromCString:(char *)cString
-{
-    int idx = 0;
-    int counter = 0;
-    char *newCString;
-    while (cString[idx] != '\0') {
-        if (cString[idx] != '\n' &&
-            cString[idx] != '\t' &&
-            cString[idx] != ' ') {
-            cString[idx] = ' ';
-            newCString[counter] = cString[idx];
-            counter++;
-        }
-        idx++;
-    }
-    return [NSString stringWithCString:newCString
-                       encoding:NSUTF8StringEncoding];
-}
-
 -(NSOperationQueue *)networkQueue {
     if (_networkQueue == nil) {
         _networkQueue = [[NSOperationQueue alloc] init];
