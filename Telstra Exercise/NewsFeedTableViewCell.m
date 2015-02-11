@@ -117,7 +117,7 @@
                                 }];
                             }
                              andFailureBlock:^(NSError *error) {
-                                 [self.imgView removeFromSuperview];
+                                 [self.imgView setHidden:YES];
                                  [self layoutIfNeeded];
                              }];
     } else {
@@ -125,15 +125,15 @@
     }
 }
 
-- (void)cleanup
-{
-}
-
 -(void)prepareForReuse
 {
+    self.titleLabel.text = nil;
     [self.titleLabel setHidden:NO];
+    self.descriptionLabel.text = nil;
     [self.descriptionLabel setHidden:NO];
+    self.imgView.image = nil;
     [self.imgView setHidden:NO];
+    self.networkRequest = [NetworkRequest sharedManager];
 }
 
 - (CGRect)availableContentView
@@ -163,7 +163,7 @@
     self.titleLabel.frame = titleFrame;
     
     CGRect imgViewFrame = CGRectZero;
-    if (_newsObj.imageHref) {
+    if (_newsObj.imageHref && !self.imgView.isHidden) {
         imgViewFrame.size.width = viewWidth/3;
         imgViewFrame.size.height = viewWidth/4;
         imgViewFrame.origin.x = (viewWidth-imgViewFrame.size.width);
@@ -171,14 +171,16 @@
     
     [self.descriptionLabel sizeToFit];
     CGRect descriptionFrame = CGRectZero;
-    descriptionFrame.size.width = viewWidth-CGRectGetWidth(imgViewFrame);
-    descriptionFrame.size.height = CGRectGetHeight(imgViewFrame);
-    descriptionFrame.origin.x = PADDING;
-    descriptionFrame.origin.y = titleFrame.origin.y + titleFrame.size.height;
-    CGSize desc = [self.descriptionLabel.text sizeWithFont:[UIFont systemFontOfSize:12]];
-    CGFloat newDescHeight = ceil(ceil(desc.width/CGRectGetWidth(descriptionFrame))*desc.height);
-    if (CGRectGetHeight(descriptionFrame)<newDescHeight) {
-        descriptionFrame.size.height = newDescHeight;
+    if ([self.descriptionLabel text]) {
+        descriptionFrame.size.width = viewWidth-CGRectGetWidth(imgViewFrame);
+        descriptionFrame.size.height = CGRectGetHeight(imgViewFrame);
+        descriptionFrame.origin.x = PADDING;
+        descriptionFrame.origin.y = titleFrame.origin.y + titleFrame.size.height;
+        CGSize desc = [self.descriptionLabel.text sizeWithFont:[UIFont systemFontOfSize:12]];
+        CGFloat newDescHeight = ceil(ceil(desc.width/CGRectGetWidth(descriptionFrame))*desc.height);
+        if (CGRectGetHeight(descriptionFrame)<newDescHeight) {
+            descriptionFrame.size.height = newDescHeight;
+        }
     }
     self.descriptionLabel.frame = descriptionFrame;
     

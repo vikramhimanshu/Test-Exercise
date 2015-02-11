@@ -14,9 +14,6 @@
 
 @interface NewsFeedTableViewCell : UITableViewCell
 
-@property (nonatomic, unsafe_unretained) UITableView *parentTableView;
-
 - (void)setupWithNewsFeedData:(NewsFeed *)obj;
-- (void)cleanup;
 
 @end
